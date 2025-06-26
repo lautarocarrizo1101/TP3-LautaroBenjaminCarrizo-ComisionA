@@ -14,21 +14,14 @@ formulario.addEventListener("submit", (e) => {
 
     const seleccion = operacion.value;
 
-    while(num2 === 0 && seleccion === "divicion"){
-        boton.disabled = true;
-        mensaje.textContent = "No se puede dividir en 0";
-    }
 
-/*
     if(num2 === 0 && seleccion === "divicion"){
         boton.disabled = true;
         resultado = "Opcion invalida, por favor refresque la pagina";
         mensaje.textContent = `${resultado}`;
         return;
-    }else if(num2 != 0){
-        boton.disabled = false;
     }
-*/
+
     if(isNaN(num1) || isNaN(num2)){
         mensaje.textContent = "Por favor introduzca numeros para trabajar";
         return;
