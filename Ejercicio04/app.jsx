@@ -1,6 +1,6 @@
 function App() {
     const [izquierda, setIzquierda] = React.useState(true);
-    const [derecha, setDerecha] = React.useState;
+    const [derecha, setDerecha] = React.useState(false);
 
     const botonIzquierdo = () => {
         setIzquierda(true);
