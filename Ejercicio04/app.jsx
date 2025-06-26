@@ -6,17 +6,19 @@ function App() {
 
     const botonIzquierdo = () => {
         setIzquierda(true);
+        setDerecha(false)
     };
 
     const botonDerecho = () => {
         setIzquierda(false);
+        setDerecha(true);
     };
 
     return (
         <>
         <div>
             <button onClick={botonIzquierdo} disabled={izquierda}>Izquierda</button>
-            <button onClick={botonDerecho} disabled={!derecha}>Derecha</button>
+            <button onClick={botonDerecho} disabled={derecha}>Derecha</button>
         </div>
         </>
     );
