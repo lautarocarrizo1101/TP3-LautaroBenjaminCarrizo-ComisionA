@@ -6,6 +6,21 @@ const mensaje = document.getElementById("mensaje");
 const boton = document.getElementById("boton");
 let resultado;
 
+function ValidarBoton() {
+    const seleccion = operacion.value;
+    const num2 = parseFloat(numero2.value);
+
+    if(seleccion === "division" && num2 === 0){
+        boton.disabled = true;
+    }else{
+        boton.disabled = false;
+    }
+}
+
+numero2.addEventListener("input", ValidarBoton);
+
+operacion.addEventListener("change", ValidarBoton);
+
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -47,3 +62,5 @@ formulario.addEventListener("submit", (e) => {
     
     mensaje.textContent = `${resultado}`;
 });
+
+ValidarBoton();
