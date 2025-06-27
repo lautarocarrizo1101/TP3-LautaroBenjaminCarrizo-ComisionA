@@ -59,39 +59,39 @@ function App() {
         setRespuesta(res);
     };
 
-    const deshabilitarBoton = false; // o lógica diferente
+    const deshabilitarBoton = false;
 
     return (
         <>
-            <h1>Calculadora</h1>
-            <form onSubmit={Calcular}>
-                <label htmlFor="numero1">1er Numero:</label>
-                <input 
-                    id="numero1" 
-                    type="number" 
-                    value={numero1}
-                    onChange={PrimerNumero}
-                />
-                <br />
-                <label htmlFor="numero2">2do Numero:</label>
-                <input 
-                    id="numero2" 
-                    type="number" 
-                    value={numero2}
-                    onChange={SegundoNumero}
-                />
-                <br />
-                <select id="operaciones" value={operacion} onChange={manejarOperacion}>
-                    <option value="suma">Sumar</option>
-                    <option value="resta">Restar</option>
-                    <option value="multi">Multiplicar</option>
-                    <option value="division">Dividir</option>
-                </select>
-                <button type="submit" disabled={deshabilitarBoton}>Calcular</button>
-                <br />
-                {respuesta !== null && (<p>{respuesta}</p>)}
-                {errorDivision && (<p>{errorDivision}</p>)}
-            </form>
+        <h1>Calculadora</h1>
+        <form onSubmit={Calcular}>
+            <label htmlFor="numero1">1er Numero:</label>
+            <input 
+                id="numero1" 
+                type="number" 
+                value={numero1}
+                onChange={PrimerNumero}
+            />
+            <br />
+            <label htmlFor="numero2">2do Numero:</label>
+            <input 
+                id="numero2" 
+                type="number" 
+                value={numero2}
+                onChange={SegundoNumero}
+            />
+            <br />
+            <select id="operaciones" value={operacion} onChange={manejarOperacion}>
+                <option value="suma">Sumar</option>
+                <option value="resta">Restar</option>
+                <option value="multi">Multiplicar</option>
+                <option value="division">Dividir</option>
+            </select>
+            <button type="submit" disabled={deshabilitarBoton}>Calcular</button>
+            <br />
+            {respuesta !== null && (<p>{respuesta}</p>)}
+            {errorDivision && (<p>{errorDivision}</p>)}
+        </form>
         </>
     );
 }
