@@ -1,0 +1,15 @@
+.nivel_bajo {
+    color: yellow;
+}
+
+.nivel_normal {
+    color: green;
+}
+
+.nivel_sobrepeso {
+    color: orangered;
+}
+
+.nivel_obesidad{
+    color: red;
+}
