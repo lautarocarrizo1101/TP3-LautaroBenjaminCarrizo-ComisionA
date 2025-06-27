@@ -6,6 +6,13 @@ function App() {
     const [mensaje, setMensaje] = useState('');
     const [clase, setClase] = useState('');
 
+    const estilos = {
+        nivel_bajo: { color: "#ffff00" },
+        nivel_normal: { color: "#008000" },
+        nivel_sobrepeso: { color: "#ff4500" },
+        nivel_obesidad: { color: "#ff0000" },
+    };
+
     function Kilogramos(event) {
         setPeso(event.target.value);
         setMensaje('');
@@ -27,10 +34,10 @@ function App() {
         IMC = kg / (cm * cm);
 
         if(IMC < 18.5){
-            setMensaje('Esto es un nivel bajo');
+            setMensaje('Este es un nivel es bajo');
             setClase('nivel_bajo');
         }else if(18.5 < IMC && 24.9 > IMC){
-            setMensaje('Estos son niveles normal');
+            setMensaje('Este es un nivel es normal');
             setClase('nivel_normal');
         }else if(25 < IMC && 29.9 > IMC){
             setMensaje('Este es un nivel de sobrepeso');
@@ -63,7 +70,7 @@ function App() {
         <br />
         <button type="submit" onClick={CalculoIMC}>Calcular</button>
         <br />
-        {mensaje && <p className={clase}>{mensaje}</p>}
+        {mensaje && <p style={estilos[clase]}>{mensaje}</p>}
         </>
     );
 }
