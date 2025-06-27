@@ -29,6 +29,10 @@ function App() {
         const kg = parseFloat(peso);
         const cm = parseFloat(altura);
 
+        if(isNaN(kg) || isNaN(cm)){
+            setMensaje("Por favor introduzca numeros en los inputs");
+        }
+
         let IMC;
 
         IMC = kg / (cm * cm);
